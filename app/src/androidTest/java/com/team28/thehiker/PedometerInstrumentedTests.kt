@@ -135,6 +135,7 @@ class PedometerInstrumentedTests {
         }
     }
 
+    @Test
     fun testNewDayDetection()
     {
         mockStepsWithTimeStamp(Calendar.getInstance().timeInMillis - 86400000)

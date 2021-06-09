@@ -187,7 +187,8 @@ class PedometerActivity  : AppCompatActivity(), SensorEventListener,
 
     override fun onDestroy() {
         super.onDestroy()
-        unbindService(this)
+        if(!sensorPresent)
+            unbindService(this)
     }
 
     override fun notifyLocationUpdate(location: Location) {

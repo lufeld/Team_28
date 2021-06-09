@@ -96,6 +96,9 @@ class PedometerActivityTest {
         `when`(sharedPreferenceMock.getLastStepCountUpdate(pedometerActivity))
                 .thenReturn(saveAs)
 
+        `when`(sharedPreferenceMock.getStepCountHistory(pedometerActivity))
+                .thenReturn("")
+
         pedometerActivity.checkIfNewDay()
 
         Assert.assertEquals(pedometerActivity.stepsTaken, 0)
